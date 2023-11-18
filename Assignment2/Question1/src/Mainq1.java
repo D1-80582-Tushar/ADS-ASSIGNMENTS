@@ -13,11 +13,13 @@ public class Mainq1 {
 		
 		// left ka ek set hoga jisme hame check karna hai agar koi badi values hyi toh shift karna hai jaha pai value choti  agyi wha rukna hai
 		//outer loop
+		int countComp = 0;
 		for(int i=1;i<arr.length;i++) {
 			 //inner loop
 			int temp = arr[i];
 			int j = i - 1;
 			for (;j>=0; j--) {
+				countComp++;
 				if(arr[j]> temp) {
 					//shift
 					arr[j+1]=arr[j];
@@ -25,8 +27,10 @@ public class Mainq1 {
 					break;
 				}
 			}
+			// as j=i-1 for i = 0 ,j become -1 which on arr[-1] will give  out of index error
 			arr[j+1] = temp;				
 		}
+		System.out.println("Total comparisions:" +countComp);
     }
     
 	public static void main(String[] args) {
@@ -36,7 +40,7 @@ public class Mainq1 {
 	 for (int i : arr) {
 		 System.out.print(i+" ");
 	 }
-	 
+	 System.out.println();
 	 insertionSort(arr);
 	 
 	 System.out.println("After sort");

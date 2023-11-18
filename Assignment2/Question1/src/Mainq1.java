@@ -32,6 +32,7 @@ public class Mainq1 {
 		}
 		System.out.println("Total comparisions:" +countComp);
     }
+	
     
 	public static void main(String[] args) {
     //	1. Write a insertion sort function to sort array and returns no of comparisions.
@@ -41,8 +42,7 @@ public class Mainq1 {
 		 System.out.print(i+" ");
 	 }
 	 System.out.println();
-	 insertionSort(arr);
-	 
+	 insertionSort(arr);	 
 	 System.out.println("After sort");
 	 for (int i : arr) {
 		 System.out.print(i+" ");

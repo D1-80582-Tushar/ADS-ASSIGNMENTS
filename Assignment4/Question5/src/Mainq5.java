@@ -11,6 +11,7 @@ public class Mainq5 {
 		list.add(30);
 		list.add(40);
 		list.add(25);
+		list.add(15);
 		list.Display();
 	}
 

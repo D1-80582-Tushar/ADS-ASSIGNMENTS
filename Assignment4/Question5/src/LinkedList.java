@@ -36,44 +36,6 @@ public class LinkedList<T> {
        }
        
 
-//       //T.C = O(1)
-//       public void addFirst(T value) {
-//    	    //create a node
-//    	    Node<T> newNode = new Node(value);
-//    	    //check if list is empty
-//    	    if(isEmpty()){
-//    	        head = tail = newNode;	
-//    	    }else {
-//    	    	//not empty
-//    	    	newNode.next = head;
-//    	    	head = newNode;	
-//    	    }
-//    	    counter++;
-//       }
-//       
-//       //T.C = O(1)
-//       public void addLast(T value) {
-//    	   //step:1 create a node
-//    	    Node<T> newNode = new Node<>(value);
-//    	   
-//    	    // step 2: check if list is empty or not
-//    	    if(isEmpty()) {
-//    	    	
-//    	    	//if its empty do put the newNode pointing reference to newNode 
-//    	    	head = tail = newNode;
-//    	   
-//    	    }else {
-//    	    	//if its not empty then 
-//    	    	// 1st do put the tail.next reference to newNode
-//    	    	// then update tail reference to newNode
-//    	    	tail.next = newNode;
-//    	    	tail = newNode;
-//    	    }
-//    	    counter++;
-//    	    
-//       }
-//       
-       
        public void addInSort(T value) {
     	    //create a node
     	    Node<T> newNode = new Node<>(value);
@@ -103,50 +65,8 @@ public class LinkedList<T> {
        public void add(T value) {
     	   addInSort(value);
        }
-       
-       //T.C = O(1)
-       public void delFirst() {
-    	    // if empty
-    	   if(isEmpty()) {
-    		   return;
-    	   }
-    	   // if size == 1 
-    	   else if(counter == 1){
-    		   head = tail = null;
-    	   }
-    	   else{
-    		   head = head.next;
-    	   }
-    	   counter--;
-       }
-       
-       //T.C = O(n)
-       public void delLast() {
-    	   //if empty
-    	   if(isEmpty()) {
-    		    return;
-    	   }
-    	   else if(counter==1){
-    	
-    		   head = tail = null;
-    	
-    	   }else {
-    	      // we cannot do tail = tail.prev as its singly linked list
-    		   //so 1st we need to traverse over it
-    		   //create a temprary traverse reference pointing to head
-    		   Node<T> traverseReference = head; 
-    		   while(traverseReference!=null) {
-    			   if(traverseReference.next.next==null) { //stop at second last as we need to get track of on previous node before last
-    				       traverseReference.next = null;
-    				       tail = traverseReference;
-    				       traverseReference = null;
-    			   }else {
-    				   traverseReference = traverseReference.next;
-    			   }
-    		   }
-    	   }
-    	   counter--;
-       }
+
+ 
        
        //T.C = O(n)
        public void Display() {

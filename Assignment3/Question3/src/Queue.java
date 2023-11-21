@@ -44,6 +44,7 @@ public class Queue {
     public boolean isEmpty() {
     	return (front == rear)?true:false;
     }
+    
     public boolean isFull() {
     	if(rear == SIZE-1) {
     		return true;

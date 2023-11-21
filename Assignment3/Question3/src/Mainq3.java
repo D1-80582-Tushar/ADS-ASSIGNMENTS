@@ -32,6 +32,7 @@ public class Mainq3 {
 		for (int i = 0; i < 5; i++) {
           q.push(i+1);
 		}
+		
 		for (int i = 0; i < 5; i++) {
 			System.out.print(q.peek() + " ");
 			q.pop();
